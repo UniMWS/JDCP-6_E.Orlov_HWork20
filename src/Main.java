@@ -17,9 +17,10 @@ public class Main {
                 .replaceAll("\\[", "")  // удаление [
                 .replaceAll("]", ""); // удаление ]
         System.out.printf("Список людей до сортировки:%s.\n", printPeople);
-        // сортировка с компаратором
-        Collections.sort(people, new PersonsSurnameAgeComparator());
+        System.out.println("\nЗадача 2: указывается максимальное количество слов в фамилии");
+        // сортировка с компаратором и максимальным количеством СЛОВ в фамилии
+        Collections.sort(people, new PersonsSurnameAgeComparator(4));// Задача 2
         // форматированный вывод списка
-        System.out.printf("\nСписок после сортировки:%s.\n", people.toString().replaceAll("\\[|\\]", ""));
+        System.out.printf("Список после сортировки:%s.\n", people.toString().replaceAll("\\[|\\]", ""));
     }
 }
