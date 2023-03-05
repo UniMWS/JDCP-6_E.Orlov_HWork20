@@ -1,13 +1,10 @@
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Person {
     private String name;
     private String surname;
     private int age;
-    Set<String> surnameSet = new HashSet<>();// все СЛОВА фамилии в множество для получения количества
+    List<String> surnameSet = new ArrayList<>();// все СЛОВА фамилии в список для получения количества
 
     public Person(String name, String surname, int age) {
         this.name = name;
@@ -20,7 +17,7 @@ public class Person {
         return surname;
     }
 
-    public Set<String> getSurnameSet() {
+    public List<String> getSurnameSet() {
         return surnameSet;
     }
 
